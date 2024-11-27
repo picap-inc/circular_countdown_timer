@@ -243,6 +243,7 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
     _controller = AnimationController(
       vsync: this,
       duration: Duration(seconds: widget.duration),
+      animationBehavior: AnimationBehavior.preserve,
     );
 
     _controller!.addStatusListener((status) {
